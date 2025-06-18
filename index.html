@@ -25,8 +25,8 @@
 <body>
   <h1 id="content" style="color:green;">Internet Connection is OK</h1>
   <h1 id="notice" style="color:red;">No Internet Connection</h1>
-  <h2 id="1">Battery Percentage: <span id="battery" style=" color:green;"></span></h2>
-  <h2 id="2">Battery Charging: <span id="status"
+  <h2 id="1">Device's Battery Percentage: <span id="battery" style=" color:green;"></span></h2>
+  <h2 id="2">Device Charging Status: <span id="status"
 style=" color:green; "></span></h2>
 <img src="#" alt="error" style="display:none;" id="img" width="100%">
   <script>
@@ -40,7 +40,7 @@ style=" color:green; "></span></h2>
 navigator.getBattery().then(function(b) {
           var p = b.level * 100;
           document.getElementById("battery").innerHTML = p + "%";
-          var a = b.charging ? "yes" : "no";
+          var a = b.charging ? "ON" : "OFF";
           document.getElementById("status").innerHTML = a;
 if(a=="yes"){
     document.getElementById("img").style.display= "block";
