@@ -42,7 +42,7 @@ navigator.getBattery().then(function(b) {
           document.getElementById("battery").innerHTML = p + "%";
           var a = b.charging ? "ON" : "OFF";
           document.getElementById("status").innerHTML = a;
-if(a=="yes"){
+if(a=="ON"){
     document.getElementById("img").style.display= "block";
 document.getElementById("img").src="./char.png";
 }else{
