@@ -38,7 +38,7 @@ style=" color:green; "></span></h2>
         document.getElementById("2").style.display = "block";
 
 navigator.getBattery().then(function(b) {
-          var p = b.level * 100;
+          var p =Math.floor(b.level * 100);
           document.getElementById("battery").innerHTML = p + "%";
           var a = b.charging ? "ON" : "OFF";
           document.getElementById("status").innerHTML = a;
