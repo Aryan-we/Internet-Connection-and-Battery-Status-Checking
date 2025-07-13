@@ -13,7 +13,7 @@
       color: #fff;
     }
 
-    
+    /* Loader Styles */
     #loader {
       position: fixed;
       width: 100%;
@@ -48,7 +48,7 @@
 
     @keyframes typing {
       from { width: 0; }
-      to { width: 58%; }
+      to { width: 50%; }
     }
 
     @keyframes blink {
@@ -62,7 +62,16 @@
       margin: 20px 0;
       object-fit: cover;
       box-shadow: 0 0 20px #0ff;
-   
+    }
+
+    .spinner {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #0ff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
 
     @keyframes spin {
       0% { transform: rotate(0deg); }
@@ -111,7 +120,7 @@
   <!-- Loader Screen -->
   <div id="loader">
     <h1>Aryan Kumar Dubey</h1>
-    <img src="https://i.ibb.co/hR8nsmVJ/IMG-20250702-211232.jpg" alt="Aryan Photo" onerror="this.style.display='none'">
+    <img src="https://i.ibb.co/YFH4hjP5/IMG-20250713-051057.jpg" alt="Aryan Photo" onerror="this.style.display='none'">
     <div class="welcome-text">Welcome to Aryan Kumar Dubey’s Device Dashboard
 </div>
    
@@ -135,7 +144,7 @@
           document.getElementById("loader").style.display = "none";
           document.getElementById("main-content").style.display = "block";
         }, 1000);
-      }, 4500); 
+      }, 4500); // Show loader for 3s
     });
 
     // Check battery + internet
