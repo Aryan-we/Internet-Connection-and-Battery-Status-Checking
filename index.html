@@ -13,7 +13,7 @@
       color: #fff;
     }
 
-    /* Loader Styles */
+    
     #loader {
       position: fixed;
       width: 100%;
@@ -62,16 +62,7 @@
       margin: 20px 0;
       object-fit: cover;
       box-shadow: 0 0 20px #0ff;
-    }
-
-    .spinner {
-      border: 8px solid #f3f3f3;
-      border-top: 8px solid #0ff;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      animation: spin 1s linear infinite;
-    }
+   
 
     @keyframes spin {
       0% { transform: rotate(0deg); }
@@ -144,7 +135,7 @@
           document.getElementById("loader").style.display = "none";
           document.getElementById("main-content").style.display = "block";
         }, 1000);
-      }, 4500); // Show loader for 3s
+      }, 4500); 
     });
 
     // Check battery + internet
